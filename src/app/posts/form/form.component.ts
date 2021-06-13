@@ -10,11 +10,15 @@ import { District, Province, Vaccines,Location } from "./district-get";
 })
 
 export class FormCreate implements OnInit{
+  activate: Boolean=true;
   provinceList: Province []= [];
   districtList: District []= [];
   vaccinesList: Vaccines []= [];
   locationList: Location []=[];
   constructor(private service:FormService) {
+
+
+
 
     this.service.httpProvince()
     .subscribe(response=>{
